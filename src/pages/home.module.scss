@@ -1,0 +1,117 @@
+.Main {
+  padding: 1rem;
+  height: 100%;
+}
+
+
+.Form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Input {
+  flex: 1 0;
+  padding: 0.8rem;
+  border: 2px solid #155592;
+  background-color: #202231;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.Button {
+  color: #fff;
+  padding: 0.8rem;
+  background-color: #155592;
+  box-shadow: 10px 10px #202231;
+  border-radius: 4px;
+  border: 2px solid #202231;
+  transition: all ease-in 0.2s;
+
+  &:hover,
+  &:target {
+    box-shadow: none;
+    transform: translateY(4px);
+    transition: all ease-in 0.1s;
+    opacity: 1;
+  }
+}
+
+.List {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem 0;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: auto;
+
+  padding: 0.8rem;
+  border-radius: 4px;
+  background-color: #3e4474;
+  box-shadow: none;
+  transition: all ease-in 0.1s;
+
+  &:hover,
+  &:target {
+    box-shadow: 10px 10px #202231;
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+.CardImage {
+  border-radius: 4px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.CardFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 14px;
+  font-weight: bold;
+
+  justify-self: flex-end;
+
+  span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .List {
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    margin: 2rem 0;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .Card, .CardImage {
+    width: 280px;
+  }
+
+  .Form {
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .List {
+    grid-template-columns: repeat(5, 305px);
+  }
+
+  .Card, .CardImage {
+    width: 305px;
+  }
+}
